@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme/theme-provider';
 import { QueryProvider } from '@/components/providers/query-provider';
 import { AuthSessionProvider } from '@/components/providers/auth-session-provider';
 import { UserMenu } from '@/components/auth/user-menu';
+import { NavLinks } from '@/components/layout/nav-links';
 
 export const metadata: Metadata = {
   title: 'TaskFlow',
@@ -19,8 +20,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <AuthSessionProvider>
             <QueryProvider>
               <div className="min-h-dvh flex flex-col">
-                <header className="border-b px-4 py-2 flex items-center gap-4">
+                <header className="border-b px-4 py-2 flex items-center gap-6">
                   <span className="font-semibold text-lg">TaskFlow</span>
+                  <NavLinks />
                   <div className="ml-auto" />
                   <UserMenu />
                 </header>

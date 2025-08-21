@@ -1,12 +1,12 @@
-import { z } from "zod";
-import { TagId, UserId, TaskId } from "../task/task.schema";
+import { z } from 'zod';
+import { TagId, UserId, TaskId } from '../task/task.schema';
 
 export const TagSchema = z.object({
-  id: TagId,
-  owner_id: UserId,
-  name: z.string().min(1).max(40),
-  color: z.string().max(32).nullable().optional(),
-  created_at: z.string().datetime(),
+  id: z.string().uuid(),
+  owner_id: z.string().uuid(),
+  name: z.string(),
+  color: z.string().nullable().optional(),
+  created_at: z.string().optional(),
 });
 
 export type Tag = z.infer<typeof TagSchema>;

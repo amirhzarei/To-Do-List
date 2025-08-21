@@ -7,7 +7,6 @@ coverage
 
 # Env
 .env*
-!.env.example
 
 # Logs
 npm-debug.log*

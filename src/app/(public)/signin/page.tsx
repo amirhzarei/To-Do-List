@@ -58,9 +58,8 @@ export default function SignInPage() {
                 >
                     {loading ? 'Signing in...' : 'Sign In'}
                 </button>
-
                 <p className="text-xs text-neutral-500">
-                    Don&apos;t have an account? (Add a Sign Up flow later)
+                    Need an account? <Link href="/signup" className="text-brand underline">Sign Up</Link>
                 </p>
                 <Link href="/" className="text-xs text-brand underline">
                     Back to home
